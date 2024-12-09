@@ -8,11 +8,6 @@ builder.Services.AddSingleton<TokenGenerator>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
 app.MapPost("/login", (LoginRequest request, TokenGenerator tokenGenerator) =>
 {
     return new

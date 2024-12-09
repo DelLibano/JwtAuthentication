@@ -52,9 +52,9 @@
 	],
 	"variable": [
 		{
-			"value": "",
-			"type": "string",
-			"disabled": true
+			"key": "base_url",
+			"value": "http://localhost:5024",
+			"type": "string"
 		}
 	]
 }
