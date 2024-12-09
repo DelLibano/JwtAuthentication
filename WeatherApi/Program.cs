@@ -3,7 +3,6 @@ using Microsoft.IdentityModel.Tokens;
 using Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var securityKey = System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>(nameof(SymmetricSecurityKey), string.Empty));
 builder.Services.AddOpenApi();
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -11,7 +10,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
         x.TokenValidationParameters = new TokenValidationParameters
         {
-            IssuerSigningKey = new SymmetricSecurityKey(securityKey),
+            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>(nameof(SymmetricSecurityKey), string.Empty))),
             ValidIssuer = builder.Configuration.GetValue<string>("ValidIssuer", string.Empty),
             ValidAudience = builder.Configuration.GetValue<string>("ValidAudience", string.Empty),
             ValidateIssuerSigningKey = true,
