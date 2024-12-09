@@ -1,0 +1,25 @@
+{
+	"info": {
+		"_postman_id": "95ac958a-e2da-49d1-85fe-964ab38f1787",
+		"name": "WeatherApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8236913"
+	},
+	"item": [
+		{
+			"name": "Weather",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2NzgzYzhmZi1lZjczLTQyMjgtOTU4OC1hODE5NTE3MjY3MWQiLCJzdWIiOiIiLCJlbWFpbCI6IiIsIm5pY2tuYW1lIjoiIiwibmJmIjoxNzMzNzM4NjAyLCJleHAiOjE3MzM3NDIyMDIsImlhdCI6MTczMzczODYwMiwiaXNzIjoiaHR0cHM6Ly93d3cudGVrbm9idWlsZC5jb20iLCJhdWQiOiJodHRwczovL3Rla25vYnVpbGQuY29tIn0.I7UPRq9KTfTkmIaUmrX2ay5rydeHcd1iNaTRFOpK7MU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/weather"
+			},
+			"response": []
+		}
+	]
+}
