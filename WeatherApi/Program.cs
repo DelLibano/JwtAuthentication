@@ -5,11 +5,13 @@ using WeatherApi.Endpoints;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddWebServices(builder.Configuration);
+builder.Services.AddJWTServices();
 
 var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGet("/weather", RootHandlers.Get).RequireAuthorization().WithName(UriHelper.Weather).WithOpenApi();
+app.MapPost("/login", LoginHandler.Login).WithName(UriHelper.Login);
+app.MapGet("/weather", WeatherHandler.Get).RequireAuthorization().WithName(UriHelper.Weather);
 
 app.Run();

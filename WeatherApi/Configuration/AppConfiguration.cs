@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using WeatherApi.Services;
 
 namespace WeatherApi.Configuration
 {
@@ -24,5 +25,11 @@ namespace WeatherApi.Configuration
                     };
                 });
         }
+
+        public static void AddJWTServices(this IServiceCollection services)
+        {
+            services.AddSingleton<TokenGenerator>();
+        }
+
     }
 }

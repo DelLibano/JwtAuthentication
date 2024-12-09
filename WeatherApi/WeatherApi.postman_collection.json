@@ -12,12 +12,20 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmNzY3MTU4NC1mMTY4LTRjZjItODU2Ny02MWUxYzViZWZlYzUiLCJzdWIiOiIiLCJlbWFpbCI6IiIsIm5pY2tuYW1lIjoiIiwibmJmIjoxNzMzNzQ3OTk0LCJleHAiOjE3MzM3NTE1OTQsImlhdCI6MTczMzc0Nzk5NCwiaXNzIjoiaHR0cHM6Ly93d3cudGVrbm9idWlsZC5jb20iLCJhdWQiOiJodHRwczovL3Rla25vYnVpbGQuY29tIn0.tTM1Y8pojtVzK1uO1ty8XUqaZyBkwsVuixxEks0l4hE"
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1ZDU3ZTlhZC1lMjdlLTQ0ZDQtYTVmOS03Y2E5ZjVkMDY3NDUiLCJzdWIiOiIiLCJlbWFpbCI6IiIsIm5pY2tuYW1lIjoiIiwibmJmIjoxNzMzNzQ5NjE1LCJleHAiOjE3MzM3NTMyMTUsImlhdCI6MTczMzc0OTYxNSwiaXNzIjoiaHR0cHM6Ly93d3cudGVrbm9idWlsZC5jb20iLCJhdWQiOiJodHRwczovL3Rla25vYnVpbGQuY29tIn0.5JMoKwma6Ch7zUWZXwgcCnb5sRuxOMloL_mAbv4Hy1E"
 					}
 				},
 				"method": "GET",
 				"header": [],
 				"url": "{{base_url}}/weather"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": []
 			},
 			"response": []
 		}
