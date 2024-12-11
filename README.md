@@ -1,3 +1,3 @@
 # JWT Authentication
 
-This solution contains 2 Projects:1 for Identity that generates a JWT token, and the other for Weather that uses generated JWT token
+This solution contains 1 Project that allows you to Login and generate a JWT token, and then ask for the weather Weather that uses the generated JWT token
