@@ -1,10 +1,10 @@
-﻿using Models;
+﻿using WeatherApi.Models;
 
 namespace WeatherApi.Endpoints
 {
     static class WeatherHandler
     {
-        public static Forecast[] Get()
+        public static IResult Get()
         {
             var summaries = new[]
             {
@@ -18,7 +18,7 @@ namespace WeatherApi.Endpoints
                         summaries[Random.Shared.Next(summaries.Length)]
                     ))
                 .ToArray();
-            return forecast;
+            return Results.Ok(forecast);
         }
     }
 }

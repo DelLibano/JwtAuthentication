@@ -1,4 +1,3 @@
-using WeatherApi;
 using WeatherApi.Configuration;
 using WeatherApi.Endpoints;
 
@@ -11,7 +10,7 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapPost("/login", LoginHandler.Login).WithName(UriHelper.Login);
-app.MapGet("/weather", WeatherHandler.Get).RequireAuthorization().WithName(UriHelper.Weather);
+app.MapPost("/login", LoginHandler.Login).WithName(Constants.Login);
+app.MapGet("/weather", WeatherHandler.Get).RequireAuthorization().WithName(Constants.Weather);
 
 app.Run();

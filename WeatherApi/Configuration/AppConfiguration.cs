@@ -15,9 +15,9 @@ namespace WeatherApi.Configuration
                 {
                     x.TokenValidationParameters = new TokenValidationParameters
                     {
-                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(configuration.GetValue<string>(nameof(SymmetricSecurityKey), string.Empty))),
-                        ValidIssuer = configuration.GetValue<string>("ValidIssuer", string.Empty),
-                        ValidAudience = configuration.GetValue<string>("ValidAudience", string.Empty),
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(configuration.GetValue<string>(nameof(Constants.SecretKeyName), string.Empty))),
+                        ValidIssuer = Constants.JwtIssuerAndAudience,
+                        ValidAudience = Constants.JwtIssuerAndAudience,
                         ValidateIssuerSigningKey = true,
                         ValidateLifetime = true,
                         ValidateIssuer = true,
